@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  width: 100%;
+  height: 8vh;
+  padding: 0 50px;
+}
+.logo{
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+.menuu{
+  display: flex;
+}
+.menuu li{
+  list-style: none;
+  margin: 0 15px;
+  font-weight: 900;
+}
+.menuu li a{
+  color: white;
+  text-decoration: none;
+  font-weight: 45px;
+}
+.menu-btn{
+  font-size: 20px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+.nav__input{
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+@media  screen and (max-width:800px){
+  .menu-btn{
+    display: block;
+  }
+  .menuu{
+    position: fixed;
+    flex-direction: column;
+    top: 8vh;
+    left: 70%;
+    width: 30%;
+    height: 45%;
+    line-height: 65px;
+    align-items: center;
+    background:gray;
+    transform: translateX(100%);
+    transition: .3s ease-in-out;
+  }
+  .menuu li{
+    align-items: center;
+    text-align: center;
+    background: black;
+    width: 100%;
+    height: 40%;
+  }
+  .menuu li:hover{
+    background: gray;
+  }
+  .nav__input:checked + .menuu{
+    transform: translateX(0);
+  }
+}
